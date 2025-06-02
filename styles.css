@@ -1,0 +1,125 @@
+html{
+    max-width: 375px;
+}
+body{
+    color: white;
+    background-image:url("/conference-ticket-generator/assets/images/background-mobile.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+label{
+    font-size:  20px; 
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 14px;
+}
+.logo-inicio > img{
+    width: 155px;
+}
+.forms .container {
+    margin: 0;
+}
+
+.container-avatar{
+    margin: 0 0.6rem;
+}
+
+.container-upload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.7rem;
+    border: 2px dashed rgba(255, 255, 255, 0.473) ;
+    background-color: hsla(245, 19%, 35%, 0.292);
+}
+.container-upload > p{
+    margin-top: 0;
+    font-size: 14px;
+    word-spacing: 2.4px;
+    letter-spacing: 1.3px;
+    color: rgba(255, 255, 255, 0.47);
+}
+.img-upload > img{
+    display: grid;
+    margin: 1rem 2rem;
+    padding: 0.5rem;
+    background-color: rgba(243, 230, 215, 0.16);
+    border-radius: 0.5rem;
+    border: 0.3px solid rgba(183, 163, 163, 0.218);
+}
+.container-upload > input{
+    display: none;
+}
+
+.container-error{
+    display: grid;
+    grid-template-columns: 23px 1fr;
+    grid-template-rows: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+p{
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.control-error{
+    margin: 0;
+    display: inline-block;
+    font-size: xx-small;
+    color: rgba(255, 255, 255, 0.434);
+}
+
+img{
+    margin: 20px 0;
+}
+h1{
+    font-size: x-large;
+    text-align: center;
+    word-spacing: 10px;
+}
+h2{
+    margin-top: 0;
+    font-size: medium;
+    text-align: center;
+    word-spacing: 7px;
+    color: rgba(255, 255, 255, 0.621);
+}
+
+.container-form-user{
+    margin: 0 0.6rem;
+}
+
+.container-form-user label{
+    display: grid;
+}
+
+.container-form-user  input{
+    margin-right: 0 0.6rem;
+    height: 50px;
+    border-radius: 0.7rem;
+    padding: 0 1rem;
+    color: white;
+    background-color: rgba(139, 174, 174, 0.178);
+    border: 0.3px solid rgba(255, 255, 255, 0.474);
+}
+
+button{
+    display: grid;
+    margin-top: 24px;
+    grid-template-rows: 45px;
+    align-items: center;
+    background-color: hsl(7, 88%, 67%);
+    border-radius: 0.7rem;
+    color: black;
+    font-size: 17px;
+    word-spacing: 3px;
+}
+
+

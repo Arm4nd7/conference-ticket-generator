@@ -8,12 +8,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@75..125,200..900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Conference ticket generator</title>
 </head>
 
 <body>
   <header>
     <div class="container">
+      <label for="logo-inicio" class="logo-inicio">
+        <img src="/conference-ticket-generator/assets/images/logo-full.svg" alt="logo-full">
+      </label>
       <h1>
         Your Journey to Coding Conf 2025 Starts Here!
       </h1>
@@ -25,34 +29,42 @@
   <!-- Form starts -->
   <main>
     <section class="forms">
-
-      <div class="container">
+      <div class="container-avatar">
         <form action="#">
-          <label for="#">
             <p>Upload Avatar</p>
-            <div class="container">
-              <input type="file" name="photo">
+            <div class="container-upload">
+              <label for="fileInput" class="img-upload">
+                <img  src="/conference-ticket-generator/assets/images/icon-upload.svg" alt="upload">
+              </label>
+              <input id="fileInput" type="file" name="photo">
               <p>Drag and drop or click to upload</p>
             </div>
-            <p class="control-error">Upload your photo (JPG or PNG, max size: 500KB).</p>
-          </label>
+            <div class="container-error">
+              <i for="info" class="icon-info">
+                <img src="/conference-ticket-generator/assets/images/icon-info.svg" alt="info">
+              </i>
+              <p class="control-error">Upload your photo (JPG or PNG, max size: 500KB).</p>
+            </div>
         </form>
       </div>
-      <div class="container">
+      <div class="container-form-user">
         <form action="#">
           <label for="#">
-            Full Name
+            <p>Full Name</p>
             <input type="text" name="fullname" minlength="3" maxlength="50">
           </label>
-          <label for="">
-            Email Address
+          <label for="#">
+            <p>Email Address</p>
             <input type="email" placeholder="example@email.com" name="email" maxlength="50" minlength="5">
           </label>
-          <label for="">
-            GitHub Username
+          <label for="#">
+            <p>GitHub Username</p>
             <input type="text" placeholder="@yourusername" name="GitHub" maxlength="50" minlength="2">
           </label>
-          <button>Generate My Ticket</button>
+          <label for="">
+            <button><b>Generate My Ticket</b></button>
+          </label>
+          
         </form>
       </div>
     </section>
