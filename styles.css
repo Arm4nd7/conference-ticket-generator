@@ -1,6 +1,7 @@
 html{
     max-width: 375px;
 }
+
 body{
     color: white;
     background-image:url("/conference-ticket-generator/assets/images/background-mobile.png");
@@ -8,9 +9,11 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 label{
     font-size:  20px; 
 }
+
 .container{
     display: flex;
     justify-content: center;
@@ -18,9 +21,11 @@ label{
     flex-direction: column;
     margin: 0 14px;
 }
+
 .logo-inicio > img{
     width: 155px;
 }
+
 .forms .container {
     margin: 0;
 }
@@ -30,30 +35,41 @@ label{
 }
 
 .container-upload{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 40px;
     border-radius: 0.7rem;
     border: 2px dashed rgba(255, 255, 255, 0.473) ;
     background-color: hsla(245, 19%, 35%, 0.292);
 }
+
 .container-upload > p{
+    display: grid;
     margin-top: 0;
-    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
     word-spacing: 2.4px;
     letter-spacing: 1.3px;
-    color: rgba(255, 255, 255, 0.47);
+    color: rgba(255, 255, 255, 0.485);
 }
-.img-upload > img{
+
+.img-upload{
     display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-upload > input{
+    display: none;
+}
+
+.img-upload > img{
     margin: 1rem 2rem;
     padding: 0.5rem;
     background-color: rgba(243, 230, 215, 0.16);
     border-radius: 0.5rem;
     border: 0.3px solid rgba(183, 163, 163, 0.218);
-}
-.container-upload > input{
-    display: none;
 }
 
 .container-error{
@@ -66,9 +82,10 @@ label{
 }
 
 p{
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 1px;
 }
+
 .control-error{
     margin: 0;
     display: inline-block;
@@ -79,11 +96,13 @@ p{
 img{
     margin: 20px 0;
 }
+
 h1{
     font-size: x-large;
     text-align: center;
     word-spacing: 10px;
 }
+
 h2{
     margin-top: 0;
     font-size: medium;
@@ -113,13 +132,21 @@ h2{
 button{
     display: grid;
     margin-top: 24px;
-    grid-template-rows: 45px;
+    grid-template-rows: 50px;
     align-items: center;
-    background-color: hsl(7, 88%, 67%);
     border-radius: 0.7rem;
-    color: black;
-    font-size: 17px;
+    font-size: 18px;
     word-spacing: 3px;
+    color: black;
+    background-color: hsl(7, 88%, 67%);
+    border: 0 solid rgba(255, 255, 255, 0);
 }
 
+.container-info-ticket > img{
+    width: 310px;
+}
 
+.container-ticket{
+    display: grid;
+    grid-template-rows: 0px;
+}
