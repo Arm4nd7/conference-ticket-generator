@@ -142,11 +142,64 @@ button{
     border: 0 solid rgba(255, 255, 255, 0);
 }
 
-.container-info-ticket > img{
-    width: 310px;
-}
-
 .container-ticket{
     display: grid;
-    grid-template-rows: 0px;
+    max-width: 100%;
+    justify-content: center;
+    grid-template-rows: 0;
+}
+
+.container-info-ticket img{
+    max-width: 100%;
+    max-height: 145px;
+}
+
+.container-ticket-info-avatar{
+    width: 70%;
+    padding: 0 1.2rem;
+}
+
+.container-ticket-info-avatar .user-date{
+    font-size: x-small;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.607);
+}
+
+.container-logo-date{
+    padding:  1.4rem 0;
+}
+.container-logo-date > img{
+    width: 155px;
+    margin-bottom: 0;
+}
+.container-logo-date > p{
+    margin-top: 0;
+}
+
+.container-info-logo-avatar{
+    display: grid;
+    grid-template-columns: 45px 100px;
+    gap: 0 1rem;
+    grid-template-areas: 
+    "   user-logo     user-name  "
+    "   user-logo    user-email   "
+    ;
+}
+
+.user-logo {
+    margin: 0;
+    width: 45px;
+    border-radius: 0.5rem;
+    grid-area: user-logo;
+}
+
+.user-name{
+    margin-top: 0;
+    margin-bottom: 0;
+    grid-area: user-name;
+}
+
+.user-email{
+    margin: 0;
+    grid-area: user-email;
 }

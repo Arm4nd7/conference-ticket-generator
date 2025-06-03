@@ -1,0 +1,12 @@
+html{
+    max-width: 375px;
+}
+
+body{
+    color: white;
+    background-image:url("/conference-ticket-generator/assets/images/background-mobile.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

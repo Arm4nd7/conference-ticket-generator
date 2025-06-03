@@ -10,7 +10,10 @@
 
 <body>
     <header>
-        <div class="container-congrat">
+        <div class="container">
+            <label for="logo-inicio" class="logo-inicio">
+                <img src="/conference-ticket-generator/assets/images/logo-full.svg" alt="logo-full">
+            </label>
             <h1>
                 Congrats, <p id="nombre">Nombre</p>! Your ticket is ready.
             </h1>
@@ -23,16 +26,23 @@
 
     <div class="container-ticket">
         <div class="container-info-ticket">
-            <img id="ticket" src="/conference-ticket-generator/assets/images/pattern-ticket.svg" alt="">
+            <img src="/conference-ticket-generator/assets/images/pattern-ticket.svg" alt="ticket">
         </div>
-        <div class="container-congrat">
-            <h1>Coding Conf</h1>
-            <p>Jan 31, 2025 / Austin, TX</p>
-            <h3>Nombre</h3>
-            <p>correo</p>
+        <div class="container-ticket-info-avatar">
+            <div class="container-logo-date">
+                <label for="logo-inicio" class="logo-inicio">
+                    <img src="/conference-ticket-generator/assets/images/logo-full.svg" alt="logo-full">
+                </label>
+                <p class="user-date">Jan 31, 2025 / Austin, TX</p>
+            </div>
+            <div class="container-info-logo-avatar">
+                <img class="user-logo" src="/conference-ticket-generator/assets/images/image-avatar.jpg" alt="">
+                <h3 class="user-name">Nombre</h3>
+                <p class="user-email">correo</p>
+            </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>
