@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@75..125,200..900&display=swap"
     rel="stylesheet">
@@ -26,7 +25,6 @@
       </h2>
     </div>
   </header>
-  <!-- Form starts -->
   <main>
     <section class="forms">
       <div class="container-avatar">
@@ -34,14 +32,14 @@
             <p>Upload Avatar</p>
             <div class="container-upload">
               <label for="fileInput" class="img-upload">
-                <img  src="/conference-ticket-generator/assets/images/icon-upload.svg" alt="upload">
+                <img id="upload-image-avatar-before" src="/conference-ticket-generator/assets/images/icon-upload.svg" alt="upload">
               </label>
               <input id="fileInput" type="file" name="photo">
-              <p>Drag and drop or click to upload</p>
+              <p id="option-upload">Drag and drop or click to upload</p>
             </div>
             <div class="container-error">
               <i for="info" class="icon-info">
-                <img src="/conference-ticket-generator/assets/images/icon-info.svg" alt="info">
+                <img  src="/conference-ticket-generator/assets/images/icon-info.svg" alt="info">
               </i>
               <p class="control-error">Upload your photo (JPG or PNG, max size: 500KB).</p>
             </div>
@@ -61,16 +59,16 @@
             <p>GitHub Username</p>
             <input type="text" placeholder="@yourusername" name="GitHub" maxlength="50" minlength="2">
           </label>
-          <label for="">
-            <button><b>Generate My Ticket</b></button>
+          <label for="#">
+            <button id="generateTicketBtn"><b>Generate My Ticket</b></button>
           </label>
-          
+
         </form>
       </div>
     </section>
+    <script src="script.js"></script>
   </main>
 
-  <!-- Form ends -->
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.

@@ -1,20 +1,20 @@
-html{
+html {
     max-width: 375px;
 }
 
-body{
+body {
     color: white;
-    background-image:url("/conference-ticket-generator/assets/images/background-mobile.png");
+    background-image: url("/conference-ticket-generator/assets/images/background-mobile.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-label{
-    font-size:  20px; 
+label {
+    font-size: 20px;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,28 +22,15 @@ label{
     margin: 0 14px;
 }
 
-.logo-inicio > img{
+.logo-inicio>img {
     width: 155px;
 }
 
-.forms .container {
-    margin: 0;
-}
-
-.container-avatar{
+.container-avatar {
     margin: 0 0.6rem;
 }
 
-.container-upload{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 40px;
-    border-radius: 0.7rem;
-    border: 2px dashed rgba(255, 255, 255, 0.473) ;
-    background-color: hsla(245, 19%, 35%, 0.292);
-}
-
-.container-upload > p{
+.container-upload>p {
     display: grid;
     margin-top: 0;
     align-items: center;
@@ -54,25 +41,40 @@ label{
     color: rgba(255, 255, 255, 0.485);
 }
 
-.img-upload{
+
+.container-upload {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 40px;
+    border-radius: 0.7rem;
+    border: 2px dashed rgba(255, 255, 255, 0.473);
+    background-color: hsla(245, 19%, 35%, 0.292);
+}
+
+
+.img-upload { 
+    display: grid; 
     justify-content: center;
     align-items: center;
+
 }
 
-.container-upload > input{
-    display: none;
-}
-
-.img-upload > img{
-    margin: 1rem 2rem;
+.img-upload>img{
     padding: 0.5rem;
     background-color: rgba(243, 230, 215, 0.16);
     border-radius: 0.5rem;
     border: 0.3px solid rgba(183, 163, 163, 0.218);
+    object-fit: cover;
+} 
+
+
+.container-upload>input {
+    display: none;
 }
 
-.container-error{
+
+
+.container-error {
     display: grid;
     grid-template-columns: 23px 1fr;
     grid-template-rows: 40px;
@@ -81,29 +83,25 @@ label{
     margin: 0;
 }
 
-p{
+p {
     font-size: 16px;
     letter-spacing: 1px;
 }
 
-.control-error{
+.control-error {
     margin: 0;
     display: inline-block;
     font-size: xx-small;
     color: rgba(255, 255, 255, 0.434);
 }
 
-img{
-    margin: 20px 0;
-}
-
-h1{
+h1 {
     font-size: x-large;
     text-align: center;
     word-spacing: 10px;
 }
 
-h2{
+h2 {
     margin-top: 0;
     font-size: medium;
     text-align: center;
@@ -111,15 +109,15 @@ h2{
     color: rgba(255, 255, 255, 0.621);
 }
 
-.container-form-user{
+.container-form-user {
     margin: 0 0.6rem;
 }
 
-.container-form-user label{
+.container-form-user label {
     display: grid;
 }
 
-.container-form-user  input{
+.container-form-user input {
     margin-right: 0 0.6rem;
     height: 50px;
     border-radius: 0.7rem;
@@ -129,7 +127,7 @@ h2{
     border: 0.3px solid rgba(255, 255, 255, 0.474);
 }
 
-button{
+button {
     display: grid;
     margin-top: 24px;
     grid-template-rows: 50px;
@@ -142,45 +140,46 @@ button{
     border: 0 solid rgba(255, 255, 255, 0);
 }
 
-.container-ticket{
+.container-ticket {
     display: grid;
     max-width: 100%;
     justify-content: center;
     grid-template-rows: 0;
 }
 
-.container-info-ticket img{
+.container-info-ticket img {
     max-width: 100%;
     max-height: 145px;
 }
 
-.container-ticket-info-avatar{
+.container-ticket-info-avatar {
     width: 70%;
     padding: 1rem 1rem;
 }
 
-.container-ticket-info-avatar .user-date{
+.container-ticket-info-avatar .user-date {
     font-size: x-small;
     text-align: center;
     color: rgba(255, 255, 255, 0.607);
 }
 
-.container-logo-date > img{
+.container-logo-date>img {
     width: 155px;
     margin-bottom: 0;
 }
-.container-logo-date > p{
+
+.container-logo-date>p {
     margin-top: 0;
     padding-bottom: 1.3rem;
 }
 
-.container-info-logo-avatar{
+.container-info-logo-avatar {
     display: grid;
     grid-template-columns: 45px 100px;
     gap: 0 1rem;
-    grid-template-areas: 
-    "   user-logo     user-name  "
-    "   user-logo    user-email   "
+    grid-template-areas:
+        "   user-logo     user-name  "
+        "   user-logo    user-email   "
     ;
 }
 
@@ -191,13 +190,32 @@ button{
     grid-area: user-logo;
 }
 
-.user-name{
+.user-name {
     margin-top: 0;
     margin-bottom: 0;
     grid-area: user-name;
 }
 
-.user-email{
+.user-email {
     margin: 0;
     grid-area: user-email;
+}
+
+.modify-upload {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.modify-upload button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.284);
+    color: rgba(255, 255, 255, 0.786);
+    font-size: small;
 }
