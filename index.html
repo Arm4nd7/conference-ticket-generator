@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@75..125,200..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Conference ticket generator</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <label for="logo-inicio" class="logo-inicio">
+        <img src="/conference-ticket-generator/assets/images/logo-full.svg" alt="logo-full">
+      </label>
+      <h1>
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h1>
+      <h2>
+        Secure your spot at next year's biggest coding conference.
+      </h2>
+    </div>
+  </header>
+  <main>
+    <section class="forms">
+      <div class="container-avatar">
+        <form action="#">
+            <p>Upload Avatar</p>
+            <div class="container-upload">
+              <label for="fileInput" class="img-upload">
+                <img id="upload-image-avatar-before" src="/conference-ticket-generator/assets/images/icon-upload.svg" alt="upload">
+              </label>
+              <input id="fileInput" type="file" name="photo">
+              <p id="option-upload">Drag and drop or click to upload</p>
+            </div>
+            <div class="container-error">
+              <i for="info" class="icon-info">
+                <img  src="/conference-ticket-generator/assets/images/icon-info.svg" alt="info">
+              </i>
+              <p class="control-error">Upload your photo (JPG or PNG, max size: 500KB).</p>
+            </div>
+        </form>
+      </div>
+      <div class="container-form-user">
+        <form action="#">
+          <label for="#">
+            <p>Full Name</p>
+            <input type="text" name="fullname" minlength="3" maxlength="50">
+          </label>
+          <label for="#">
+            <p>Email Address</p>
+            <input type="email" placeholder="example@email.com" name="email" maxlength="50" minlength="5">
+          </label>
+          <label for="#">
+            <p>GitHub Username</p>
+            <input type="text" placeholder="@yourusername" name="GitHub" maxlength="50" minlength="2">
+          </label>
+          <label for="#">
+            <button id="generateTicketBtn"><b>Generate My Ticket</b></button>
+          </label>
+
+        </form>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+
+</html>
