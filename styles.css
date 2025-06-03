@@ -156,7 +156,7 @@ button{
 
 .container-ticket-info-avatar{
     width: 70%;
-    padding: 0 1.2rem;
+    padding: 1rem 1rem;
 }
 
 .container-ticket-info-avatar .user-date{
@@ -165,15 +165,13 @@ button{
     color: rgba(255, 255, 255, 0.607);
 }
 
-.container-logo-date{
-    padding:  1.4rem 0;
-}
 .container-logo-date > img{
     width: 155px;
     margin-bottom: 0;
 }
 .container-logo-date > p{
     margin-top: 0;
+    padding-bottom: 1.3rem;
 }
 
 .container-info-logo-avatar{
