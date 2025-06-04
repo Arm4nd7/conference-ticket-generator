@@ -1,7 +1,8 @@
 {
-  "homepage": "",
+  "homepage": "https://arm4nd7.github.io/conference-ticket-generator/",
   "scripts": {
-  "deploy": "gh-pages -d src"},
+  "deploy": "gh-pages -d src"
+},
   "dependencies": {
     "gh-pages": "^6.3.0"
   }
