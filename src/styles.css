@@ -1,5 +1,8 @@
 body {
-    max-width: 375px;
+    display: grid;
+    grid-template-columns: 375px;
+    justify-content: center;
+    align-items: center;
     color: white;
     background-image: url("./assets/images/background-mobile.png");
     background-position: center center;
@@ -102,7 +105,7 @@ h1 {
 }
 
 .container-form-user {
-    margin: 0 0.6rem;
+    margin: 0 14px;
 }
 
 .container-form-user label {
@@ -110,7 +113,6 @@ h1 {
 }
 
 .container-form-user input {
-    margin-right: 0 0.6rem;
     height: 50px;
     border-radius: 0.7rem;
     padding: 0 1rem;
@@ -121,6 +123,8 @@ h1 {
 
 .container-form-user input:hover {
     background-color: hsla(245, 19%, 35%, 0.679);
+    border-bottom: 2px solid white;
+
 }
 
 button {
@@ -216,18 +220,18 @@ button:hover {
     align-items: center;
     width: 110px;
     height: 30px;
+    font-size: small;
     background-color: rgba(255, 255, 255, 0.284);
     color: rgba(255, 255, 255, 0.786);
-    font-size: small;
 }
 
 h1 #ticketTitleName {
     font-size: 27px;
     display: inline-block;
-    background-clip: text;
     background: linear-gradient(to right, hsl(7, 88%, 67%), white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 #recived-email {
@@ -243,4 +247,11 @@ h1 #ticketTitleName {
 
 #main-2{
     display: none;
+}
+
+@media(max-width: 375px){
+    body{
+        display: inline-block;
+    }
+
 }
