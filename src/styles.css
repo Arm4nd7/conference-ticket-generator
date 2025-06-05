@@ -1,13 +1,11 @@
-html {
-    max-width: 375px;
-}
-
 body {
+    max-width: 375px;
     color: white;
-    background-image: url("/conference-ticket-generator/assets/images/background-mobile.png");
+    background-image: url("./assets/images/background-mobile.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: "Inconsolata", monospace;
 }
 
 label {
@@ -19,7 +17,7 @@ label {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0 14px;
+    margin: 2rem 10px;
 }
 
 .logo-inicio>img {
@@ -30,18 +28,6 @@ label {
     margin: 0 0.6rem;
 }
 
-.container-upload>p {
-    display: grid;
-    margin-top: 0;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    word-spacing: 2.4px;
-    letter-spacing: 1.3px;
-    color: rgba(255, 255, 255, 0.485);
-}
-
-
 .container-upload {
     display: grid;
     grid-template-columns: 1fr;
@@ -51,21 +37,33 @@ label {
     background-color: hsla(245, 19%, 35%, 0.292);
 }
 
+.container-upload:hover {
+    background-color: hsla(245, 19%, 35%, 0.679);
+}
 
-.img-upload { 
-    display: grid; 
+.container-upload>p {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.485);
+}
+
+
+.img-upload {
+    display: grid;
     justify-content: center;
     align-items: center;
 
 }
 
-.img-upload>img{
+.img-upload>img {
     padding: 0.5rem;
     background-color: rgba(243, 230, 215, 0.16);
     border-radius: 0.5rem;
     border: 0.3px solid rgba(183, 163, 163, 0.218);
     object-fit: cover;
-} 
+}
 
 
 .container-upload>input {
@@ -85,7 +83,6 @@ label {
 
 p {
     font-size: 16px;
-    letter-spacing: 1px;
 }
 
 .control-error {
@@ -96,17 +93,16 @@ p {
 }
 
 h1 {
-    font-size: x-large;
+    margin-top: 30px;
+    font-size: 26px;
     text-align: center;
-    word-spacing: 10px;
 }
 
-h2 {
-    margin-top: 0;
-    font-size: medium;
+.container p {
+    margin: 8px 0 5px 0;
+    font-size: 18px;
     text-align: center;
-    word-spacing: 7px;
-    color: rgba(255, 255, 255, 0.621);
+    color: rgba(255, 255, 255, 0.647);
 }
 
 .container-form-user {
@@ -127,6 +123,10 @@ h2 {
     border: 0.3px solid rgba(255, 255, 255, 0.474);
 }
 
+.container-form-user input:hover {
+    background-color: hsla(245, 19%, 35%, 0.679);
+}
+
 button {
     display: grid;
     margin-top: 24px;
@@ -134,10 +134,15 @@ button {
     align-items: center;
     border-radius: 0.7rem;
     font-size: 18px;
-    word-spacing: 3px;
     color: black;
     background-color: hsl(7, 88%, 67%);
     border: 0 solid rgba(255, 255, 255, 0);
+}
+
+button:hover {
+    background-color: hsl(7, 71%, 60%);
+    border-bottom: 0.3rem solid hsl(7, 88%, 67%);
+    cursor: pointer;
 }
 
 .container-ticket {
@@ -219,3 +224,28 @@ button {
     color: rgba(255, 255, 255, 0.786);
     font-size: small;
 }
+
+h1 #ticketTitleName {
+    font-size: 27px;
+    display: inline-block;
+    background-clip: text;
+    background: linear-gradient(to right, hsl(7, 88%, 67%), white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#recived-email{
+    display: inline-block;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#ticketTitleEmail{
+    display: inline-block;
+    color: hsl(7, 88%, 67%);
+}
+
+#pagina-tikets{
+    display: none;
+}
+

@@ -1,10 +1,10 @@
 const uploadImageButton = document.getElementById("fileInput");
-
+const form = document.querySelector('form');
 
 if (uploadImageButton) {
     uploadImageButton.addEventListener("change", () => {
         const borrar = document.getElementById("option-upload");
-        borrar?.remove(); 
+        borrar?.remove();
         uploadImage();
         showImage();
     });
@@ -30,79 +30,57 @@ function showImage() {
     const reader = new FileReader();
     reader.onload = function (event) {
         const borrar = document.getElementById("upload-image-avatar-before");
-        borrar?.remove(); 
-        const imgElement = document.querySelector(".img-upload img");
-        imgElement.src = event.target.result;
+        borrar?.remove();
+        const imageUp = document.querySelector(".img-upload img");
+        imageUp.src = event.target.result;
 
     };
     reader.readAsDataURL(file);
 }
 
+const generateTicketButton = document.getElementById("generateTicketBtn");
 
-const generateTicketButton = document.getElementById("generateTicketBtn"); 
-
-if (generateTicketButton) { 
+if (generateTicketButton) {
     generateTicketButton.addEventListener("click", (event) => {
-        event.preventDefault(); 
+        event.preventDefault();
 
-        const fullName = document.querySelector('input[name="fullname"]').value;
-        const emailAddress = document.querySelector('input[name="email"]').value;
-        const gitHubUsername = document.querySelector('input[name="GitHub"]').value;
+        const fullName = document.querySelector('input[name="fullname"]').value.trim();
+        const emailAddress = document.querySelector('input[name="email"]').value.trim();
+        const gitHubUsername = document.querySelector('input[name="GitHub"]').value.trim();
 
-        let uploadedImageSrc = "/conference-ticket-generator/assets/images/image-avatar.jpg"; 
-        const currentImageElement = document.querySelector(".img-upload img");
-        if (currentImageElement && currentImageElement.src && !currentImageElement.src.includes("icon-upload.svg")) {
-            uploadedImageSrc = currentImageElement.src;
+        // ✅ Validación
+        if (!fullName || !emailAddress || !gitHubUsername) {
+            alert("Por favor, completa todos los campos.");
+            return;
         }
 
+        // ✅ Imagen
+        let uploadedImageSrc = "./assets/images/image-avatar.jpg";
+        const imageIconUpload = document.querySelector(".img-upload img");
+        if (imageIconUpload && imageIconUpload.src && !imageIconUpload.src.includes("icon-upload.svg")) {
+            uploadedImageSrc = imageIconUpload.src;
+        }
+
+        // ✅ Guardar en localStorage
         localStorage.setItem("ticketFullName", fullName);
         localStorage.setItem("ticketEmailAddress", emailAddress);
-        localStorage.setItem("ticketGitHubUsername", gitHubUsername); 
+        localStorage.setItem("ticketGitHubUsername", gitHubUsername);
         localStorage.setItem("ticketImageSrc", uploadedImageSrc);
 
-        // Redirigir a la página del ticket
-        window.location.href = "index-ticket.html";
+        // ✅ Mostrar la pantalla del ticket
+        document.querySelector("header").style.display = "none";
+        document.querySelector("main").style.display = "none";
+        document.getElementById("pagina-tikets").style.display = "block";
+
+        // ✅ Cargar los datos del ticket directamente aquí
+        document.getElementById("ticketTitleName").textContent = fullName;
+        document.getElementById("ticketTitleEmail").textContent = emailAddress;
+        document.getElementById("ticketUserName").textContent = fullName;
+        document.getElementById("ticketUserEmail").textContent = emailAddress;
+
+        const userLogo = document.querySelector(".user-logo");
+        if (userLogo && uploadedImageSrc) {
+            userLogo.src = uploadedImageSrc;
+        }
     });
 }
-
-
-//cuando pasamos a index-ticket 
-document.addEventListener("DOMContentLoaded", () => {
-    // si estamos en  "index-ticket.html"
-    if (window.location.pathname.includes("index-ticket.html")) {
-        // 1. Recuperar la información de localStorage
-        const ticketFullName = localStorage.getItem("ticketFullName");
-        const ticketEmailAddress = localStorage.getItem("ticketEmailAddress");
-        const ticketImageSrc = localStorage.getItem("ticketImageSrc");
-
-        // 2. Actualizar el nombre en el título (h1)
-        const ticketTitleNameElement = document.getElementById("ticketTitleName");
-        if (ticketTitleNameElement && ticketFullName) {
-            ticketTitleNameElement.textContent = ticketFullName;
-        }
-
-        // 3. Actualizar el correo en el subtítulo (h2)
-        const ticketTitleEmailElement = document.getElementById("ticketTitleEmail");
-        if (ticketTitleEmailElement && ticketEmailAddress) {
-            ticketTitleEmailElement.textContent = ticketEmailAddress;
-        }
-
-        // 4. Actualizar el nombre en el ticket (h3 user-name)
-        const ticketUserNameElement = document.getElementById("ticketUserName");
-        if (ticketUserNameElement && ticketFullName) {
-            ticketUserNameElement.textContent = ticketFullName;
-        }
-
-        // 5. Actualizar el correo en el ticket (p user-email)
-        const ticketUserEmailElement = document.getElementById("ticketUserEmail");
-        if (ticketUserEmailElement && ticketEmailAddress) {
-            ticketUserEmailElement.textContent = ticketEmailAddress;
-        }
-
-        // 6. Actualizar la imagen del avatar en el ticket
-        const userLogoElement = document.querySelector(".user-logo");
-        if (userLogoElement && ticketImageSrc) {
-            userLogoElement.src = ticketImageSrc;
-        }
-    }
-});
