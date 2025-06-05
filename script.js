@@ -70,7 +70,7 @@ if (generateTicketButton) {
         // ✅ Mostrar la pantalla del ticket
         document.querySelector("header").style.display = "none";
         document.querySelector("main").style.display = "none";
-        document.getElementById("pagina-tikets").style.display = "block";
+        document.getElementById("main-2").style.display = "block";
 
         // ✅ Cargar los datos del ticket directamente aquí
         document.getElementById("ticketTitleName").textContent = fullName;
