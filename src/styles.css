@@ -33,8 +33,6 @@ label {
 
 .container-upload {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 40px;
     border-radius: 0.7rem;
     border: 2px dashed rgba(255, 255, 255, 0.473);
     background-color: hsla(245, 19%, 35%, 0.292);
@@ -44,27 +42,27 @@ label {
     background-color: hsla(245, 19%, 35%, 0.679);
 }
 
-.container-upload>p {
+.container-upload p {
     display: grid;
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    margin-top: 0;
     color: rgba(255, 255, 255, 0.485);
 }
 
 .img-upload {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-
+    text-align: center;
+    margin: 1rem 0 1rem 0;
 }
 
 .img-upload>img {
-    padding: 0.5rem;
     background-color: rgba(243, 230, 215, 0.16);
     border-radius: 0.5rem;
     border: 0.3px solid rgba(183, 163, 163, 0.218);
-    object-fit: cover;
+    width: 40px;
+    height: 40px;
+
 }
 
 .container-upload>input {
@@ -127,7 +125,7 @@ h1 {
 
 }
 
-button {
+#generateTicketBtn {
     display: grid;
     margin-top: 24px;
     grid-template-rows: 50px;
@@ -139,7 +137,7 @@ button {
     border: 0 solid rgba(255, 255, 255, 0);
 }
 
-button:hover {
+#generateTicketBtn:hover {
     background-color: hsl(7, 71%, 60%);
     border-bottom: 0.3rem solid hsl(7, 88%, 67%);
     cursor: pointer;
@@ -208,20 +206,30 @@ button:hover {
 
 .modify-upload {
     display: flex;
-    gap: 1rem;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2rem;
+    gap: 1rem;
+
 }
 
-.modify-upload button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 110px;
-    height: 30px;
-    font-size: small;
-    background-color: rgba(255, 255, 255, 0.284);
+.modify-upload .removeAvatar {
+    margin-bottom: 10px;
+    height: 27px;
+    font-size: x-small;
+    border-radius: 0.4rem;
+    border: 0 solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.101);
+    color: rgba(255, 255, 255, 0.786);
+}
+
+.modify-upload .editAvatar {
+    margin-bottom: 10px;
+    /* height: 27px; */
+    padding: 0.5rem;
+    font-size: 11px;
+    border-radius: 0.4rem;
+    border: 0 solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.101);
     color: rgba(255, 255, 255, 0.786);
 }
 
@@ -245,12 +253,12 @@ h1 #ticketTitleName {
     color: hsl(7, 88%, 67%);
 }
 
-#main-2{
+#main-2 {
     display: none;
 }
 
-@media(max-width: 375px){
-    body{
+@media(max-width: 375px) {
+    body {
         display: inline-block;
     }
 
