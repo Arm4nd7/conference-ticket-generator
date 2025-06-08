@@ -42,7 +42,7 @@ label {
     background-color: hsla(245, 19%, 35%, 0.679);
 }
 
-.container-upload p {
+.container-upload p{
     display: grid;
     align-items: center;
     justify-content: center;
@@ -74,18 +74,34 @@ label {
     display: grid;
     grid-template-columns: 23px 1fr;
     grid-template-rows: 40px;
-    justify-content: flex-start;
     align-items: center;
     margin: 0;
 }
 
+.emailUser{
+    display: inline-block;
+}
+.email-user-error{
+    display: grid;
+    grid-template-columns: 23px 1fr;
+    grid-template-rows: 0px;
+    align-items: center;
+    margin-top: 0;
+}
 
 
-.control-error {
+.control-error{
     margin: 0;
     display: inline-block;
     font-size: xx-small;
     color: rgba(255, 255, 255, 0.434);
+}
+
+.parrafo-error{
+    margin: 0;
+    display: inline-block;
+    font-size: xx-small;
+    color: hsl(7, 88%, 67%);
 }
 
 h1 {
