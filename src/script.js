@@ -65,7 +65,6 @@ function createButtonModify() {
     if (containerUpload) {
         containerUpload.appendChild(div);
     }
-
 }
 
 function buttonRemoveAvatar() {
@@ -76,14 +75,19 @@ function buttonRemoveAvatar() {
     });
 }
 
-
-
-
 const generateTicketButton = document.getElementById("generateTicketBtn");
 
+let numeroTiket = 0
+let almacenarNumero = 0
 if (generateTicketButton) {
+    let pNumero = document.querySelector(".numero");
     generateTicketButton.addEventListener("click", (event) => {
         event.preventDefault();
+
+        almacenarNumero = numeroTiket++
+        pNumero.textContent = numeroTiket;
+
+
 
         const fullName = document.querySelector('input[name="fullname"]').value.trim();
         const emailAddress = document.querySelector('input[name="email"]').value.trim();
@@ -108,16 +112,18 @@ if (generateTicketButton) {
         localStorage.setItem("ticketGitHubUsername", gitHubUsername);
         localStorage.setItem("ticketImageSrc", uploadedImageSrc);
 
-        // Mostramos la pantalla del ticket
-        document.querySelector("header").style.display = "none";
-        document.querySelector("main").style.display = "none";
-        document.getElementById("main-2").style.display = "block";
+
 
         // ponemos los datos del ticket directamente
         document.getElementById("ticketTitleName").textContent = fullName;
         document.getElementById("ticketTitleEmail").textContent = emailAddress;
         document.getElementById("ticketUserName").textContent = fullName;
         document.getElementById("ticketUserEmail").textContent = emailAddress;
+
+                // Mostramos la pantalla del ticket
+        document.querySelector("header").style.display = "none";
+        document.querySelector("main").style.display = "none";
+        document.getElementById("main-2").style.display = "block";
 
         const userLogo = document.querySelector(".user-logo");
         if (userLogo && uploadedImageSrc) {

@@ -46,26 +46,26 @@
       <div class="container-form-user">
         <form action="#">
           <label for="#">
-            <p>Full Name</p>
+            Full Name
             <input type="text" name="fullname" required minlength="3" maxlength="50">
           </label>
           <label for="#">
-            <p>Email Address</p>
+            Email Address
             <input required type="email" placeholder="example@email.com" name="email" required maxlength="50"
               minlength="5">
           </label>
           <label for="#">
-            <p>GitHub Username</p>
+            GitHub Username
             <input required type="text" placeholder="@yourusername" name="GitHub" required maxlength="50" minlength="2">
           </label>
           <label for="#">
-            <button required id="generateTicketBtn"><b>Generate My Ticket</b></button>
+            <button required id="generateTicketBtn" type="button"><b>Generate My Ticket</b></button>
           </label>
         </form>
       </div>
     </section>
   </main>
-  <main id="main-2">
+  <main hidden id="main-2">
     <!--segunda pagina-->
     <section id="pagina-tikets">
       <div class="container">
@@ -92,15 +92,19 @@
           </div>
           <div class="container-info-logo-avatar">
             <img class="user-logo" src="./assets/images/image-avatar.jpg" alt="User Avatar">
-            <h3 class="user-name" id="ticketUserName"></h3>
-            <p class="user-email" id="ticketUserEmail"></p>
+            <h3 class="user-name" id="ticketUserName">prueba</h3>
+            <p class="user-email" id="ticketUserEmail">prueba</p>
+          </div>
+          <div class="numero-tiket">
+            <p>#</p>
+            <p class="numero">numero</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="attribution">
+  <footer hidden class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Armando Estevez</a>.
   </footer>
