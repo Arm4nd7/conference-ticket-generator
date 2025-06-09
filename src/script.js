@@ -69,7 +69,7 @@ function buttonRemoveAvatar() {
     let removeAvatar = document.querySelector(".removeAvatar");
     removeAvatar.addEventListener("click", () => {
         const newImage = document.querySelector(".newImage");
-        newImage.src = "/src/assets/images/icon-upload.svg"
+        newImage.src = "./assets/images/icon-upload.svg"
     });
 }
 
@@ -119,7 +119,7 @@ if (generateTicketButton) {
         // Imagen actualizada en el tiket
         let uploadedImageSrc = document.querySelector(".user-logo");
         const imageIconUpload = document.querySelector(".img-upload img");
-        if (!imageIconUpload.src.includes("icon-upload.svg")) {
+        if (!imageIconUpload.src.includes("./assets/images/icon-upload.svg")) {
             uploadedImageSrc.src = imageIconUpload.src;
         } else {
             alert("Escoja una imagen");
