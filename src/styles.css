@@ -229,6 +229,7 @@ h1 {
 .user-logo {
     margin: 0;
     width: 45px;
+    height: 40px;
     border-radius: 0.5rem;
     grid-area: user-logo;
 }
