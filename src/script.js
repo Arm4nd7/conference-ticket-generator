@@ -82,8 +82,8 @@ function errorEmail() {
     let imageError = document.createElement("i");
     let errorEmail = document.createElement("p");
     errorEmail.classList.add("parrafo-error");
-    imageError.classList.add(".icon-info2");
-    imageError.innerHTML = `<img src="/src/assets/images/icon-info.svg"></img>`;
+    imageError.classList.add("icon-info2");
+    imageError.innerHTML = `<img src="./assets/images/icon-info.svg"></img>`;
     errorEmail.innerText = `Please enter a valid email adress`;
     labelError.appendChild(imageError);
     labelError.appendChild(errorEmail);
