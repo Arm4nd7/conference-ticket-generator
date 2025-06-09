@@ -20,7 +20,7 @@ label {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 2rem 10px;
+    margin: 1rem 10px;
 }
 
 .logo-inicio>img {
@@ -33,8 +33,6 @@ label {
 
 .container-upload {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 40px;
     border-radius: 0.7rem;
     border: 2px dashed rgba(255, 255, 255, 0.473);
     background-color: hsla(245, 19%, 35%, 0.292);
@@ -44,27 +42,28 @@ label {
     background-color: hsla(245, 19%, 35%, 0.679);
 }
 
-.container-upload>p {
+.container-upload p{
     display: grid;
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    margin-top: 0;
     color: rgba(255, 255, 255, 0.485);
 }
 
 .img-upload {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-
+    text-align: center;
+    margin: 1rem 0 1rem 0;
 }
 
 .img-upload>img {
-    padding: 0.5rem;
     background-color: rgba(243, 230, 215, 0.16);
     border-radius: 0.5rem;
     border: 0.3px solid rgba(183, 163, 163, 0.218);
-    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
 }
 
 .container-upload>input {
@@ -75,20 +74,34 @@ label {
     display: grid;
     grid-template-columns: 23px 1fr;
     grid-template-rows: 40px;
-    justify-content: flex-start;
     align-items: center;
     margin: 0;
 }
 
-p {
-    font-size: 16px;
+.emailUser{
+    display: inline-block;
+}
+.email-user-error{
+    display: grid;
+    grid-template-columns: 23px 1fr;
+    grid-template-rows: 0px;
+    align-items: center;
+    margin-top: 0;
 }
 
-.control-error {
+
+.control-error{
     margin: 0;
     display: inline-block;
     font-size: xx-small;
     color: rgba(255, 255, 255, 0.434);
+}
+
+.parrafo-error{
+    margin: 0;
+    display: inline-block;
+    font-size: xx-small;
+    color: hsl(7, 88%, 67%);
 }
 
 h1 {
@@ -110,9 +123,11 @@ h1 {
 
 .container-form-user label {
     display: grid;
+    margin: 1rem 0;
 }
 
 .container-form-user input {
+    margin: 0.5rem 0;
     height: 50px;
     border-radius: 0.7rem;
     padding: 0 1rem;
@@ -123,14 +138,13 @@ h1 {
 
 .container-form-user input:hover {
     background-color: hsla(245, 19%, 35%, 0.679);
-    border-bottom: 2px solid white;
+    box-shadow: 1px 1.3px 1px;
 
 }
 
-button {
+#generateTicketBtn {
     display: grid;
-    margin-top: 24px;
-    grid-template-rows: 50px;
+    grid-template-rows: 45px;
     align-items: center;
     border-radius: 0.7rem;
     font-size: 18px;
@@ -139,15 +153,15 @@ button {
     border: 0 solid rgba(255, 255, 255, 0);
 }
 
-button:hover {
+#generateTicketBtn:hover {
     background-color: hsl(7, 71%, 60%);
-    border-bottom: 0.3rem solid hsl(7, 88%, 67%);
+    border-bottom: 2px solid hsl(7, 88%, 67%);
     cursor: pointer;
 }
 
 .container-ticket {
     display: grid;
-    max-width: 100%;
+    margin: 5rem 0;
     justify-content: center;
     grid-template-rows: 0;
 }
@@ -158,8 +172,13 @@ button:hover {
 }
 
 .container-ticket-info-avatar {
-    width: 70%;
+    display: grid;
+    grid-template-columns: 255px 30px;
     padding: 1rem 1rem;
+    grid-template-areas:
+        "   logoDate    numeroTiket    "
+        "   dataUser    numeroTiket    "
+    ;
 }
 
 .container-ticket-info-avatar .user-date {
@@ -168,18 +187,14 @@ button:hover {
     color: rgba(255, 255, 255, 0.607);
 }
 
-.container-logo-date>img {
-    width: 155px;
-    margin-bottom: 0;
-}
+.container-logo-date {
+    grid-area: logoDate;
 
-.container-logo-date>p {
-    margin-top: 0;
-    padding-bottom: 1.3rem;
 }
 
 .container-info-logo-avatar {
     display: grid;
+    grid-area: dataUser;
     grid-template-columns: 45px 100px;
     gap: 0 1rem;
     grid-template-areas:
@@ -188,9 +203,33 @@ button:hover {
     ;
 }
 
+.numero-tiket {
+    display: flex;
+    grid-area: numeroTiket;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-lr;
+    font-size: larger;
+    color: rgba(255, 255, 255, 0.537);
+}
+
+.container-logo-date>img {
+    width: 155px;
+    margin-bottom: 0;
+}
+
+.container-logo-date>p {
+    display: grid;
+    margin-top: 3px;
+    justify-items: flex-start;
+    margin-left: 40px;
+    padding-bottom: 1.3rem;
+}
+
 .user-logo {
     margin: 0;
     width: 45px;
+    height: 40px;
     border-radius: 0.5rem;
     grid-area: user-logo;
 }
@@ -208,21 +247,33 @@ button:hover {
 
 .modify-upload {
     display: flex;
-    gap: 1rem;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2rem;
+    gap: 1rem;
+
 }
 
-.modify-upload button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 110px;
-    height: 30px;
-    font-size: small;
-    background-color: rgba(255, 255, 255, 0.284);
+.modify-upload .removeAvatar {
+    margin-bottom: 10px;
+    height: 27px;
+    font-size: x-small;
+    border-radius: 0.4rem;
+    border: 0 solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.101);
     color: rgba(255, 255, 255, 0.786);
+    cursor: pointer;
+}
+
+.modify-upload .editAvatar {
+    margin-bottom: 10px;
+    /* height: 27px; */
+    padding: 0.5rem;
+    font-size: 11px;
+    border-radius: 0.4rem;
+    border: 0 solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.101);
+    color: rgba(255, 255, 255, 0.786);
+    cursor: pointer;
 }
 
 h1 #ticketTitleName {
@@ -245,12 +296,9 @@ h1 #ticketTitleName {
     color: hsl(7, 88%, 67%);
 }
 
-#main-2{
-    display: none;
-}
 
-@media(max-width: 375px){
-    body{
+@media(max-width: 375px) {
+    body {
         display: inline-block;
     }
 
