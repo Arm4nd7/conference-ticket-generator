@@ -1,4 +1,4 @@
-# Buscador de Paises
+# Generador de Tickets
 
 ![👀](./BuscadorPaises.png)
 
