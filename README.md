@@ -1,6 +1,7 @@
 # Generador de Tickets
 
-![👀](./BuscadorPaises.png)
+![👀](./src/assets/images/formulario-ticket-arm4nd7.png)
+![👀](./src/assets/images/Tikets-arm4nd7.png)
 
 En este proyecto pudes generar tikets con tu información mediante un formulario el cual almacenará esta información y mostrara un ticket el cual te indica el numero de ticket, nombre, foto, fecha.
 
